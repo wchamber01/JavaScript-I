@@ -11,10 +11,12 @@
 
 let add = (param1, param2) => param1 + param2;
 add(1,2);
+console.log(add());
 
 
 let subtract = (param1, param2) => param1 - param2;
 subtract(1,2);
+console.log(subtract());
 
 
 // Stretch
