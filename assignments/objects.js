@@ -95,19 +95,23 @@ const parent = {
   name: "Susan",
   age: 70,
   speak: function() {
-    console.log( "My name is " + this.name + "!")
+    return "My name is " + this.name + "!"
   },
 
   child: {
     name: "George",
     age: 50,
-    speak: "My name is George!",
+    speak: function() {
+      return "My name is " + this.name + "!"
+    },
 
     grandchild: {
       name: "Sam",
       age: 30,
-      speak: "My name is Sam!"
-    },
+      speak: function() {
+        return "My name is " + this.name + "!"
+      },
+    }
   }
 }
 
@@ -121,10 +125,10 @@ console.log(parent.child.age);
 console.log(parent.child.grandchild.age);
 
 // Have the parent speak
-console.log(parent.speak)
+console.log(parent.speak())
 
 // Have the child speak
-console.log(parent.child.speak);
+console.log(parent.child.speak());
 
 // Have the grandchild speak
-console.log(parent.child.grandchild.speak);
+console.log(parent.child.grandchild.speak());
